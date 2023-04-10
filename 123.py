@@ -1,17 +1,17 @@
-# x = int(input("first"))
-# b = int(input("second"))
-# print(x + b)
-a = float(input("первое число"))
-b = float(input("второе число"))
-c = input('какое мат действие нужно сделать?')
-if c == '+':
-    print(a + b)
-elif c == '-':
-    print(a - b)
-elif c == '*':
-    print(a * b)
-elif c == '/':
-    print(a / b)
+nums = [0, 1, 0, 3, 12]
 
+zeros = 0
+for num in nums:
+    if num == 0:
+        zeros += 1
 
+i = 0
+for num in nums:
+    if num != 0:
+        nums[i] = num
+        i += 1
 
+for j in range(zeros):
+    nums[i + j] = 0
+
+print(nums) # [1, 3, 12, 0, 0]
